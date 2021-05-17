@@ -107,8 +107,6 @@ export class BackendApiService {
     })
   };
 
-
-
   agregarPost(pPost){
     pPost.categoria = pPost.categoria.toUpperCase();
     
