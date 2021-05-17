@@ -107,4 +107,29 @@ export class BackendApiService {
     })
   };
 
-}
+
+
+  agregarPost(pPost){
+    pPost.categoria = pPost.categoria.toUpperCase();
+    
+    this.peliculas.push(pPost);
+  }
+
+  getPostsByCategoria(pCategoria: string) : Promise<Post[]>{
+    return new Promise <Post[]>((resolve, reject)=>{
+      const arrFilmCat = []; //se guardan las categorías en el array
+      //guardamos las categorias en un array a través de un for que recorra todas las categorías de nuestros POST's de peliculas
+      for(let pelicula of this.peliculas){
+        if(pelicula.categoria === pCategoria){
+          arrFilmCat.push(pelicula)
+        }
+      }
+      resolve(arrFilmCat);
+    })
+  }
+
+
+
+
+
+
