@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendApiService } from '../backend-api.service';
+import { Post } from '../interface/post.interace';
+
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  listaPeliculas: Post[];
+  CategoriaPeliculas: string[];// solo nos interesa que sea de tipo string, ya que solo vamos a querer la categoría.
 
-  ngOnInit(): void {
+  constructor(private backendApiService: BackendApiService) { 
+    this.listaPeliculas = [];
+    this.CategoriaPeliculas = [];
+
   }
 
+  ngOnInit(): void {
+
+
+  }
 }
