@@ -11,16 +11,21 @@ import { Post } from '../interface/post.interace';
 export class BlogComponent implements OnInit {
 
   listaPeliculas: Post[];
-  CategoriaPeliculas: string[];// solo nos interesa que sea de tipo string, ya que solo vamos a querer la categoría.
+  categPeliculas: string[];// solo nos interesa que sea de tipo string, ya que solo vamos a querer la categoría.
 
   constructor(private backendApiService: BackendApiService) { 
     this.listaPeliculas = [];
-    this.CategoriaPeliculas = [];
+    this.categPeliculas = [];
 
   }
 
-  ngOnInit(): void {
+  ngOnInit(){  
 
 
+
+
+  }
+  onChange($event){
+      
   }
 }

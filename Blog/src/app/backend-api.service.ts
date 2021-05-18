@@ -111,6 +111,8 @@ export class BackendApiService {
     pPost.categoria = pPost.categoria.toUpperCase();
     
     this.peliculas.push(pPost);
+    //uso de localStorage, prueba numero 3
+    localStorage.setItem('arrPeliculas', JSON.stringify(this.peliculas));
   }
 
   getPostsByCategoria(pCategoria: string) : Promise<Post[]>{
