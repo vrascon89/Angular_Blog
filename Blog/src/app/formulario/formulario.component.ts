@@ -7,11 +7,22 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
-export class FormularioComponent implements OnInit {
 
-  constructor() { }
+export class FormularioComponent implements OnInit {
+  formulario : FormGroup;
+    
+  constructor() { 
+    this.formulario = new FormGroup({
+      titulo: new FormControl('', [
+        Validators.required,
+        Validators.minLength(5)
+      ])
+    })
+  }
 
   ngOnInit(): void {
   }
+  onSubmit(){
 
+  }
 }
