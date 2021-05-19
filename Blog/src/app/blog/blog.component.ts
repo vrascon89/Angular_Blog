@@ -14,18 +14,38 @@ export class BlogComponent implements OnInit {
   categPeliculas: string[];// solo nos interesa que sea de tipo string, ya que solo vamos a querer la categoría.
 
   constructor(private backendApiService: BackendApiService) { 
-    this.listaPeliculas = [];
-    this.categPeliculas = [];
+    this.listaPeliculas = []; //listado de peliculas
+    this.categPeliculas = []; //categorias de peliculas
 
   }
 
-  ngOnInit(){  
+  async ngOnInit(){  
+    if(localStorage.getItem('arrPeliculas')){
+      //llevamos la pelicula a una variable para transformarlo en un formatoJson
+      const strJson = localStorage.getItem('arrPeliculas');
+      this.listaPeliculas = JSON.parse(strJson);
+      //console.log(strJson)
+    }else{
+      this.listaPeliculas = [];
+    };
 
+    try {
+      this.listaPeliculas = await this.backendApiService.getAllPost(); //async está en ngOnInit
+    }catch (error){
 
-
-
+    }
+    this.categPeliculas = this.backendApiService.getCategorias();
   }
-  onChange($event){
-      
+
+  
+  async onChange($event){
+      if($event.target.value === 'todasCat'){
+        this.listaPeliculas = await this.backendApiService.getAllPost();
+      }else{
+        this.listaPeliculas = await this.backendApiService.getPostsByCategoria($event.target.value);
+      }
+    }catch(error){
+
   }
 }
+

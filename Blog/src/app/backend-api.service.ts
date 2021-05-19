@@ -128,7 +128,14 @@ export class BackendApiService {
     })
   }
 
+  getCategorias(): string[]{ 
+    const arrCat = this.peliculas.map(arrCategorias => arrCategorias.categoria);
+    return [...new Set(arrCat)];
 
+    //ar nuevo_array = arr.map(function callback(currentValue, index, array) {
+    // Elemento devuelto de nuevo_array
+  //}[, thisArg]
+  }
 
 
 
