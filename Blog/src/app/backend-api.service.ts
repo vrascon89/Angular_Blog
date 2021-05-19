@@ -95,8 +95,6 @@ export class BackendApiService {
   categoria: 'Animación',
 },
 
-
-
 ]
   }
 
