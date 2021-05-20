@@ -1,35 +1,16 @@
-.contenedor{
 
-    margin: 0 auto;
+
+.peliculas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 86%;
+    margin: auto;
 }
-
-
-.miColor{
-
-    background-color: #60B2E6;
-    color: white;
-}
-
-.text-center{
-    background-color: #95cdf0;
-
-}
-
-a{
-    color:  white;
-}
-
-
-
-/* MEDIA QUERIES */
-
-
-@media(max-width:767px){ 
-
-    .container{
-
-     width: 100%;
-    }
-
-
+.pelicula{
+    width: 40%;
+    padding: 2%;
+    border-radius:10px;
+    margin: 15px;
+    box-shadow: 5px 5px 10px lightslategray;
+    background-color: #e4f4fd;
 }

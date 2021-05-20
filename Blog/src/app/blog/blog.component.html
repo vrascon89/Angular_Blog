@@ -1,3 +1,4 @@
+
 <div class="select">
     <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -13,9 +14,10 @@
 <div class="container">
     <div class="peliculas">
         <div class="pelicula" *ngFor="let pelicula of listaPeliculas">
+            <img [src]='pelicula.imagen'>
             <h3>{{pelicula.titulo}}</h3>
+            <p>{{pelicula.texto}}</p>
             <h3>{{pelicula.categoria.toUpperCase()}}</h3>
-            <img [src]="pelicula.imagen">
             <p>{{pelicula.autor}}</p>
             <p>{{pelicula.fecha | date:'YYYY'}}</p>
         </div>

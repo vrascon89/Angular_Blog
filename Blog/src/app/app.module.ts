@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { BlogComponent } from './blog/blog.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule  } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

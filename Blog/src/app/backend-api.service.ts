@@ -16,7 +16,7 @@ export class BackendApiService {
       titulo: 'El señor de los Anillos. La comunidad del anillo',
       texto: 'En la Tierra Media, el Señor Oscuro Sauron ordenó a los Elfos que forjaran los Grandes Anillos de Poder. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Pero Saurón también forjó, en secreto, el Anillo Único, que tiene el poder de esclavizar toda la Tierra Media.',
       autor:'Peter Jackson',
-      imagen: 'https://pics.filmaffinity.com/the_lord_of_the_rings_the_fellowship_of_the_ring-952398002-large.jpg',
+      imagen: "https://pics.filmaffinity.com/the_lord_of_the_rings_the_fellowship_of_the_ring-952398002-large.jpg",
       fecha: new Date ('2001'),
       categoria: 'Fantastico',
     },
