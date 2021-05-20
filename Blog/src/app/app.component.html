@@ -1,6 +1,16 @@
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/blog']" (click)="onClick('blog')"
+        [ngClass]="{ miColor: (disable === 'blog') }">Consulta Peliculas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " [routerLink]="['/formulario']" (click)="onClick('form')"
+            [ngClass]="{ miColor: (disable === 'formulario') }">Añade una película</a>
+    </li>
 <ul>
-  <li [routerLink]="['/blog']">Blog</li>
-  <li [routerLink]="['/formulario']">Formulario</li>
-</ul>
 
-<router-outlet></router-outlet>
+  <div class="contenedor">
+    <router-outlet></router-outlet>
+  </div>

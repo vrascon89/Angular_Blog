@@ -8,7 +8,6 @@ const routes: Routes = [
 { path: 'blog', component: BlogComponent },
 { path: 'formulario', component:FormularioComponent },
 { path: '**', redirectTo :'/blog' }
-
 ];
 
 @NgModule({

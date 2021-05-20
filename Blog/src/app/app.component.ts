@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './interface/post.interace'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Blog';
+  disable : string;
+  constructor(){}
+  
+    onClick(pComponent){
+      this.disable = pComponent;
+  }
+
 }
