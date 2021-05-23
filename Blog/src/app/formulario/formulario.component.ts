@@ -11,18 +11,36 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class FormularioComponent implements OnInit {
   formulario : FormGroup;
     
-  constructor() { 
+  constructor(private backendApiService: BackendApiService) { 
     this.formulario = new FormGroup({
       titulo: new FormControl('', [
         Validators.required,
         Validators.minLength(5)
+      ]),
+      autor: new FormControl('',[
+        Validators.required
+      ]),
+      texto: new FormControl('',[
+        Validators.required
+      ]),
+      imagen: new FormControl('',[
+        Validators.required
+      ]),
+      fecha: new FormControl('',[
+        Validators.required
+      ]),
+      categoria: new FormControl('',[
+        Validators.required
       ])
-    })
-  }
+    });
+  };
 
   ngOnInit(): void {
   }
   onSubmit(){
+    this.backendApiService.agregarPost(this.formulario.value);
+    console.log(this.formulario.value);
 
+    this.formulario.reset();
   }
 }

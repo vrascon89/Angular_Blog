@@ -1,0 +1,18 @@
+
+contenedor{
+    margin: 0 auto;
+}
+color{
+    color: red;
+}
+
+.nav-item a{
+    
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+}
+.nav-item a:hover {
+    transition: all;
+    border-bottom: 1px solid red;
+} 

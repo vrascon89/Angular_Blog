@@ -14,12 +14,12 @@
 <div class="container">
     <div class="peliculas">
         <div class="pelicula" *ngFor="let pelicula of listaPeliculas">
-            <img [src]='pelicula.imagen'>
+            <img [src]="pelicula.imagen">
             <h3>{{pelicula.titulo}}</h3>
-            <p>{{pelicula.texto}}</p>
-            <h3>{{pelicula.categoria.toUpperCase()}}</h3>
-            <p>{{pelicula.autor}}</p>
-            <p>{{pelicula.fecha | date:'YYYY'}}</p>
+            <p> Sipnosis :<span>{{pelicula.texto}}</span></p>
+            <p> Categoría <span>:{{pelicula.categoria.toUpperCase()}}</span></p>
+            <p> Director :<span>{{pelicula.autor}}</span></p>
+            <p> Año de estreno :<span>{{pelicula.fecha | date:'YYYY'}}</span></p>
         </div>
     </div>
 </div>
